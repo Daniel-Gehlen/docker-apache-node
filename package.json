@@ -1,0 +1,19 @@
+{
+  "name": "Full-stack-application",
+  "version": "1.0.0",
+  "description": "A full stack application",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1", // Node.js Framework for Building Web Applications
+    "body-parser": "^1.19.0", // Middleware for parsing request bodies in Express applications
+    // Other dependencies specific to your project here
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13" // Monitors code changes and automatically restarts the server during development
+    // Other dependencies specific to your project here
+  }
+}
