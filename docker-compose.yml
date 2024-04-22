@@ -1,0 +1,30 @@
+version: '3'
+services:
+  web:
+    image: httpd:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/local/apache2/htdocs
+
+  dev:
+    image: node:latest
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./html:/app
+    working_dir: /app
+    environment:
+      - NODE_ENV=development
+
+  prod:
+    image: node:latest
+    command: npm start
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./html:/app
+    working_dir: /app
+    environment:
+      - NODE_ENV=production
